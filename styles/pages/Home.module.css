@@ -55,3 +55,20 @@
   width: 80%;
   transform: rotate(-20deg);
 }
+
+@media (max-width: 768px) {
+  .container .details img {
+    display: none;
+  }
+
+  .container .details {
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 2rem;
+  }
+
+  .container .details h1 {
+    text-align: center;
+  }
+}
