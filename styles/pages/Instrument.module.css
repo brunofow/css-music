@@ -1,0 +1,24 @@
+.cheatContainer {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.dontCheat {
+  font-size: 4rem;
+  font-family: 'Londrina Solid';
+  color: var(--white);
+}
+
+.cheatContainer span {
+  margin-top: 1rem;
+  cursor: pointer;
+  color: var(--white);
+}
+
+.cheatContainer span:hover {
+  text-decoration: underline;
+}

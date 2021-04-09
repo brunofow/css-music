@@ -1,0 +1,337 @@
+.guitarContainer {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  z-index: -4;
+}
+
+.guitarContainer svg {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  transform: scaleX(-1);
+  cursor: pointer;
+}
+
+.guitarContainer h1 {
+  font-size: 4rem;
+  font-family: 'Londrina Solid';
+  color: var(--white);
+  position: absolute;
+  top: 2rem;
+}
+
+.guitarContainer .selector {
+  position: absolute;
+  top: 8rem;
+
+  width: 8rem;
+  height: 2.5rem;
+  border-radius: 8px;
+  border: 0;
+  cursor: pointer; 
+  transition: filter .3s;
+
+  color: var(--white);
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.guitarContainer .selector:hover {
+  filter: brightness(0.7);
+}
+
+.guitarContainer .click {
+  background: var(--secondary);
+}
+
+.guitarContainer .hover {
+  background: var(--green);
+}
+
+.guitar {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  transform: rotate(90deg);
+  margin-top: 10rem;
+}
+
+.guitar .hole {
+  background: #000;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  
+}
+
+.guitar::after {
+  content: '';
+  width: 9rem;
+  height: 9em;
+  background: var(--wood);
+  position: absolute;
+  border-radius: 50%;
+  top: 0.1rem;
+  left: 50%;
+  z-index: -2;
+  transform: translate(-50%, -50%);
+  border-style: solid;
+  border-width: 2px;
+  border-right-width: 2px; 
+  border-color: #bd050d #bd050d transparent;
+}
+
+.guitar::before {
+  content: '';
+  width: 11rem;
+  height: 11rem;
+  background: var(--wood);
+  position: absolute;
+  border-radius: 50%;
+  position: absolute;
+  top: 7rem;
+  left: 50%;
+  z-index: -2;
+  transform: translate(-50%, -50%);
+  border: 2px solid #bd050d;
+}
+
+.guitar .bridge {
+  width: 4rem;
+  height: 1rem;
+  background: #1c1602;
+  position: absolute;
+  top: 9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.guitar .bridge::after {
+  content: '';
+  width: 3rem;
+  height: 0.3rem;
+  background: var(--white);
+  position: absolute;
+  border-radius: 3px;
+}
+
+.guitar .neck {
+  width: 3rem;
+  height: 14rem;
+  background: #2b2003;
+  position: absolute;
+  bottom: 7rem;
+  display: flex;
+  justify-content: center;
+}
+
+.guitar .headstock {
+  width: 4rem;
+  height: 7rem;
+  background: #2b2003;
+  position: absolute;
+  bottom: 13rem;
+  border-radius: 1.5rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.guitar .headstock::before,
+.guitar .headstock::after {
+  content: '';
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: 50%;
+  background: var(--primary);
+  top: -.7rem;
+  position: absolute;
+  left: 10%;
+}
+
+.guitar .headstock::after {
+  left: 55%
+}
+
+.guitar .headstock .headHole {
+  width: .7rem;
+  height: 4rem;
+  background: var(--primary);
+  border-radius: 10px;
+}
+
+.guitar .headstock .headHole .tuningPegs {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.guitar .headstock .headHole .tuningPegs span {
+  width: 100%;
+  height: .3rem;
+  background: var(--white);
+}
+
+.guitar .headstock .turners {
+  width: 3.5rem;
+  height: 5rem;
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.guitar .headstock .turners div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 100%;
+  position: absolute;
+}
+
+.guitar .headstock .turners div:first-child {
+  left: -.9rem;
+}
+
+.guitar .headstock .turners div:last-child {
+  right: -.9rem;
+}
+
+.guitar .headstock .turners span {
+  background: #ede4df;
+  width: 1rem;
+  height: .7rem;
+  position: relative;
+}
+
+.guitar .headstock .turners span::after,
+.guitar .headstock .turners span::before {
+  content: '';
+  width: .4rem;
+  height: .4rem;
+  background: var(--primary);
+  border-radius: 50%;
+  position: absolute;
+}
+
+.guitar .headstock .turners div:first-child span::after,
+.guitar .headstock .turners div:first-child span::before {
+  left: -.2rem;
+}
+
+.guitar .headstock .turners span::before {
+  bottom: 60%;
+}
+
+.guitar .headstock .turners span::after {
+  bottom: -20%;
+}
+
+.guitar .headstock .turners div:last-child span::after,
+.guitar .headstock .turners div:last-child span::before {
+  right: -.2rem;
+}
+
+.guitar .neck .nut {
+  width: 90%;
+  height: .4rem;
+  background: #ede4df;
+  position: absolute;
+  top: 1rem ;
+}
+
+.guitar .neck .topStrings {
+  position: absolute;
+  top: 0;
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.guitar .neck .topStrings span {
+  width: .18rem;
+  background: #fefefe;
+  position: absolute;
+}
+
+.guitar .neck .topStrings span:nth-child(1) {
+  height: 3rem;
+  top: -10%;
+  left: 10%;
+  transform: rotate(5deg);
+}
+
+.guitar .neck .topStrings span:nth-child(2) {
+  height: 3.5rem;
+  top: -17%;
+  left: 18%;
+}
+
+.guitar .neck .topStrings span:nth-child(3) {
+  height: 5.2rem;
+  top: -28.5%;
+  left: 29%;
+  transform: rotate(-5deg);
+}
+
+.guitar .neck .topStrings span:nth-child(4) {
+  height: 5.2rem;
+  top: -28.5%;
+  right: 29%;
+  transform: rotate(5deg);
+}
+
+.guitar .neck .topStrings span:nth-child(5) {
+  height: 3.5rem;
+  top: -17%;
+  right: 24%;
+  transform: rotate(3deg);
+}
+
+.guitar .neck .topStrings span:nth-child(6) {
+  height: 3rem;
+  top: -10%;
+  right: 10%;
+  transform: rotate(-5deg);
+}
+
+.guitar .strings {
+  position: absolute;
+  bottom: -5.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.guitar .strings span {
+  background: #fefefe;
+  width: .18rem;
+  height: 25.5rem;
+  margin-right: .3rem;
+}
+
+.guitar .strings span:last-child {
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+
+  .guitarContainer h1 {
+    text-align: center;
+  }
+
+  .guitarContainer .selector {
+    display: none;
+  }
+
+  .guitar {
+    margin-top: 50rem;
+    transform: rotate(0);
+  }
+}

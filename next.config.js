@@ -2,7 +2,7 @@ module.exports = {
   webpack(config, options) {
     const { isServer } = options;
     config.module.rules.push({
-      test: /\.(ogg|mp3|wav|mpe?g)$/i,
+      test: /\.(svg|png|ogg|mp3|wav|mpe?g)$/i,
       exclude: config.exclude,
       use: [
         {
@@ -10,8 +10,8 @@ module.exports = {
           options: {
             limit: config.inlineImageLimit,
             fallback: require.resolve('file-loader'),
-            publicPath: `${config.assetPrefix}/_next/static/images/`,
-            outputPath: `${isServer ? '../' : ''}static/images/`,
+            publicPath: `${config.assetPrefix}/_next/assets/images/`,
+            outputPath: `${isServer ? '../' : ''}assets/images/`,
             name: '[name]-[hash].[ext]',
             esModule: config.esModule || false,
           },

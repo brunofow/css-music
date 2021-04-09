@@ -3,13 +3,13 @@
   height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
-  background: var(--primary);
+  
 }
 
 .container h1 {
-  font-family: 'Londrina Solid';
+  font-family: 'Londrina Solid', cursive;
   font-size: 4rem;
   color: var(--white);
   display: flex;
@@ -19,4 +19,39 @@
 .container h1 svg {
   margin-left: 0.6rem;
   margin-right: 0.6rem;
+}
+
+.container .details {
+  display: flex;
+  width: 90%;
+  justify-content: space-around;
+}
+
+.container .details img {
+  width: 40%;
+}
+
+.container .details h1 {
+  width: 40%;
+}
+
+.container .instruments {
+  min-width: 10%;
+  height: 6rem;
+  background: var(--secondary);
+  border-radius: 10px;
+}
+
+.container .instruments .card {
+  width: 10rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.container .instruments .card img {
+  width: 80%;
+  transform: rotate(-20deg);
 }
